@@ -1,0 +1,32 @@
+// C++ code
+// Traffic Light System
+
+int redLED = 13;
+int yellowLED = 8;
+int greenLED = 2;
+
+void setup() {
+  pinMode(redLED, OUTPUT);
+  pinMode(yellowLED, OUTPUT);
+  pinMode(greenLED, OUTPUT);
+}
+
+void loop() {
+  // red on
+  digitalWrite(redLED, HIGH);
+  digitalWrite(yellowLED, LOW);
+  digitalWrite(greenLED, LOW);
+  delay(5000); // 5 sec
+
+  // yellow on
+  digitalWrite(redLED, LOW);
+  digitalWrite(yellowLED, HIGH);
+  digitalWrite(greenLED, LOW);
+  delay(2000); // 2 sec
+  
+  // green on
+  digitalWrite(redLED, LOW);
+  digitalWrite(yellowLED, LOW);
+  digitalWrite(greenLED, HIGH);
+  delay(3000); // 3 sec
+}
